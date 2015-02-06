@@ -1,0 +1,68 @@
+p {
+
+}
+
+body {
+    background-image: url("http://c3270052.r52.cf0.rackcdn.com/beautiful-weather.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 1);
+	background-attachment: fixed;
+}
+
+.TitleClass {
+    max-width: 700px;
+	margin: 1.5cm 10% 1cm 10%;
+	padding: 1cm 1cm 1cm 1cm;
+	background-color: rgba(255, 255, 255, 0.5);
+	font: 28px Helvetica;
+	text-align:center;
+}
+
+.SeasonClass {
+	padding-left: 0.4cm;
+	padding-top: 0.6cm;
+	padding-right: 0.4cm;
+	font: 20px Helvetica;
+
+}
+
+.ItemClass {
+    max-width: 700px;
+	margin: 1cm 10% 1cm 10%;
+	padding: 0.5cm 0.8cm 0.8cm 0.8cm;
+	background-color: rgba(255, 255, 255, 0.5);
+	font: 20px Helvetica;
+
+}
+
+.ButtonClass {
+	margin: 1cm 10% 1cm 10%;
+}
+
+.ButtonInnerClass {
+	font: 20px Helvetica;
+}
+
+.AboutText {
+	padding-left: 0.4cm;
+	padding-top: 0.6cm;
+	padding-right: 1cm;
+	font: 20px Helvetica;
+	line-height: 150%;
+}
+
+#hello {
+	padding-left: 2cm;
+	/*
+	background-color: orange;
+	width: 100px;
+	height: 50px;
+	border-width: 2px;
+	border-style: dashed;
+	border-color: blue;
+	*/
+	border: 2px dashed blue;
+	padding: 10px;
+	
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>About - Dwell</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/css-dwell.css') }}">
+		<script src="{{ url_for('static', filename='js/vendor/modernizr.js') }}"></script>
+    </head>
+    <body>
+	
+	
+	<div class="sticky">
+	<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/">Dwell</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="/about">About  </a></li>
+    <!--   <li class="has-dropdown">
+        <a href="#">Menu</a>
+        <ul class="dropdown">
+          <li><a href="#">First link in dropdown</a></li>
+          <li class="active"><a href="#">Active link in dropdown</a></li>
+        </ul>
+      </li>
+	-->
+    </ul>
+
+    
+  </section>
+</nav>
+	</div>
+	
+	
+        <p class="TitleClass">Find the perfect city for you.</p>
+		
+		<div class="ItemClass">        		
+        	<p class="AboutText">Lorem ipsum dolor sit amet, accusata tractatos theophrastus eam ea. Vim tempor putent dictas ne, an per homero impedit. Sint augue labore sit ut, cu assum fabulas nominavi pri. Pro purto lorem mollis ne, qui at suas torquatos, accusam disputationi usu ea. <br>An usu delicata pericula electram, simul quaestio per ad. Eam putant instructior ne, per stet legimus concludaturque ne, at vocent phaedrum mel.</p>
+			</div>
+			
+			
+        <p class="ButtonClass"><button class="ButtonInnerClass" onclick="location.href='/'">Return</button></p>
+		
+		
+		<script src="{{ url_for('static', filename='js/vendor/jquery.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/foundation.min.js') }}"></script> 
+		<script> 
+			$(document).foundation(); 
+		</script> 	
+		
+    </body>
+</html>
+

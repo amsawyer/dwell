@@ -1,3 +1,122 @@
 <!DOCTYPE html>
 
-Welcome to dwell
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Dwell</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/css-dwell.css') }}">
+		<script src="{{ url_for('static', filename='js/vendor/modernizr.js') }}"></script>
+    </head>
+    <body>
+	
+	
+	<div class="sticky">
+	<nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/">Dwell</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="/about">About</a></li>
+      <!--   <li class="has-dropdown">
+        <a href="#">Menu</a>
+        <ul class="dropdown">
+          <li><a href="#">First link in dropdown</a></li>
+          <li class="active"><a href="#">Active link in dropdown</a></li>
+        </ul>
+      </li>
+	  -->
+    </ul>
+	<!--
+	<ul class="left">
+      <li class="active"><a href="/about">About</a></li>
+    </ul>
+	-->
+    
+  </section>
+</nav>
+	</div>
+	
+	
+        <p class="TitleClass">Choose your ideal temperatures for each season.</p>
+		
+		<div class="ItemClass">        		
+        	<p class="SeasonClass">Spring</p>
+			<div class="row">
+			<div class="small-10 medium-11 columns">
+				<div class="range-slider" data-slider data-options="display_selector: #sliderOutput1; start: 0; end: 140;">
+				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
+				  <span class="range-slider-active-segment"></span>
+				</div>
+			</div>
+			<div class="small-2 medium-1 columns">
+				<span id="sliderOutput1"></span>
+			</div>
+			</div>
+        	<p class="SeasonClass">Summer</p>
+			<div class="row">
+			<div class="small-10 medium-11 columns">
+				<div class="range-slider" data-slider data-options="display_selector: #sliderOutput2; start: 0; end: 140;">
+				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
+				  <span class="range-slider-active-segment"></span>
+				</div>
+			</div>
+			<div class="small-2 medium-1 columns">
+				<span id="sliderOutput2"></span>
+			</div>
+			</div>
+			<p class="SeasonClass">Fall</p>
+			<div class="row">
+			<div class="small-10 medium-11 columns">
+				<div class="range-slider" data-slider data-options="display_selector: #sliderOutput3; start: 0; end: 140;">
+				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
+				  <span class="range-slider-active-segment"></span>
+				</div>
+			</div>
+			<div class="small-2 medium-1 columns">
+				<span id="sliderOutput3"></span>
+			</div>
+			</div>
+			<p class="SeasonClass">Winter</p>
+			<div class="row">
+			<div class="small-10 medium-11 columns">
+				<div class="range-slider" data-slider data-options="display_selector: #sliderOutput4; start: 0; end: 140;">
+				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
+				  <span class="range-slider-active-segment"></span>
+				</div>
+			</div>
+			<div class="small-2 medium-1 columns">
+				<span id="sliderOutput4"></span>
+			</div>
+			</div>
+			</div>
+			
+        
+			
+        <p class="ButtonClass"><button class="ButtonInnerClass" onClick="alert('Hello');">Submit</button></p>
+		
+				
+		
+		<script src="{{ url_for('static', filename='js/vendor/jquery.js') }}"></script>
+		<script src="{{ url_for('static', filename='js/foundation.min.js') }}"></script> 
+		<script> 
+			$(document).foundation();			
+		</script> 	
+		<script type="text/javascript">
+var myVar="hello";
+function showAlert() { alert('You triggered an alert!'); }
+</script>
+
+
+    </body>
+</html>
+

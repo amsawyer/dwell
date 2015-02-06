@@ -1,0 +1,23 @@
+p {
+text-align: center;
+color: red;
+}
+
+.myFirstClass {
+	color: yellow;
+}
+
+#hello {
+	padding-left: 2cm;
+	/*
+	background-color: orange;
+	width: 100px;
+	height: 50px;
+	border-width: 2px;
+	border-style: dashed;
+	border-color: blue;
+	*/
+	border: 2px dashed blue;
+	padding: 10px;
+	
+}
