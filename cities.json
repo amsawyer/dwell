@@ -1,0 +1,15 @@
+{
+	"Chicago":{
+		"spr":1,
+		"sum":2,
+		"aug":3,
+		"win":4
+	},
+
+	"New York":{
+		"spr":2,
+		"sum":4,
+		"aut":6,
+		"win":8,
+	},
+}
