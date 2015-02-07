@@ -49,11 +49,29 @@
 	
         <p class="TitleClass">Choose your ideal temperatures for each season.</p>
 		
-		<div class="ItemClass">        		
+		<div class="ItemClass"> 
+
+		
+<!-- Using radio buttons – each switch turns off the other two -->
+
+<div class="DegreeClass">
+<div class="switch small">
+  <input id="exampleRadioSwitch1" type="radio" checked name="testGroup">
+  <label for="exampleRadioSwitch1"></label>ºF
+</div>
+<br>
+<div class="switch small">
+  <input id="exampleRadioSwitch2" type="radio" name="testGroup">
+  <label for="exampleRadioSwitch2"></label>ºC
+</div> 
+</div>
+
+<br>
+		
         	<p class="SeasonClass">Spring</p>
 			<div class="row">
 			<div class="small-10 medium-11 columns">
-				<div class="range-slider" data-slider data-options="display_selector: #sliderOutput1; start: 0; end: 140;">
+				<div id="slider1" class="range-slider" data-slider data-options="display_selector: #sliderOutput1; start: -20; end: 160;">
 				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
 				  <span class="range-slider-active-segment"></span>
 				</div>
@@ -65,7 +83,7 @@
         	<p class="SeasonClass">Summer</p>
 			<div class="row">
 			<div class="small-10 medium-11 columns">
-				<div class="range-slider" data-slider data-options="display_selector: #sliderOutput2; start: 0; end: 140;">
+				<div id="slider2" class="range-slider" data-slider data-options="display_selector: #sliderOutput2; start: -20; end: 160;">
 				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
 				  <span class="range-slider-active-segment"></span>
 				</div>
@@ -77,7 +95,7 @@
 			<p class="SeasonClass">Fall</p>
 			<div class="row">
 			<div class="small-10 medium-11 columns">
-				<div class="range-slider" data-slider data-options="display_selector: #sliderOutput3; start: 0; end: 140;">
+				<div id="slider3" class="range-slider" data-slider data-options="display_selector: #sliderOutput3; start: -20; end: 160;">
 				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
 				  <span class="range-slider-active-segment"></span>
 				</div>
@@ -89,7 +107,7 @@
 			<p class="SeasonClass">Winter</p>
 			<div class="row">
 			<div class="small-10 medium-11 columns">
-				<div class="range-slider" data-slider data-options="display_selector: #sliderOutput4; start: 0; end: 140;">
+				<div id="slider4" class="range-slider" data-slider data-options="display_selector: #sliderOutput4; start: -20; end: 160;">
 				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
 				  <span class="range-slider-active-segment"></span>
 				</div>
@@ -102,7 +120,7 @@
 			
         
 			
-        <p class="ButtonClass"><button class="ButtonInnerClass" onClick="alert('Hello');">Submit</button></p>
+        <p class="ButtonClass"><button class="ButtonInnerClass" onClick="functionOne();">Submit</button></p>
 		
 				
 		
@@ -112,11 +130,77 @@
 			$(document).foundation();			
 		</script> 	
 		<script type="text/javascript">
-var myVar="hello";
-function showAlert() { alert('You triggered an alert!'); }
-</script>
+		
+		var toggle1 = 1;
+		
+		$('#exampleRadioSwitch1').click(function() { console.log('exampleRadioSwitch1 pressed');
+		
+		if (toggle1 === 0) {
+				
+		var userspring = Math.round(($('#slider1').attr('data-slider')*9/5)+32);		
+		var usersummer = Math.round(($('#slider2').attr('data-slider')*9/5)+32);
+		var userfall = Math.round(($('#slider3').attr('data-slider')*9/5)+32);
+		var userwinter = Math.round(($('#slider4').attr('data-slider')*9/5)+32);
 
+				
+		$('#slider1').foundation('slider', 'set_value', userspring);
+		$('#slider2').foundation('slider', 'set_value', usersummer);
+		$('#slider3').foundation('slider', 'set_value', userfall);
+		$('#slider4').foundation('slider', 'set_value', userwinter);
 
+					
+		toggle1 = 1;
+		
+		
+		console.log("Spring temp is " + userspring);
+		
+		}
+		
+		})
+		
+		
+		$('#exampleRadioSwitch2').click(function() { console.log('exampleRadioSwitch2 pressed');
+		
+		if (toggle1 === 1) {
+		var userspring = Math.round(($('#slider1').attr('data-slider')-32)*5/9);		
+		var usersummer = Math.round(($('#slider2').attr('data-slider')-32)*5/9);
+		var userfall = Math.round(($('#slider3').attr('data-slider')-32)*5/9);
+		var userwinter = Math.round(($('#slider4').attr('data-slider')-32)*5/9);
+		
+		
+		$('#slider1').foundation('slider', 'set_value', userspring);
+		$('#slider2').foundation('slider', 'set_value', usersummer);
+		$('#slider3').foundation('slider', 'set_value', userfall);
+		$('#slider4').foundation('slider', 'set_value', userwinter);
+
+		
+					
+		toggle1 = 0;
+		
+		console.log("Spring temp is " + userspring);
+		
+		
+		}
+		
+		})
+		
+		
+
+		</script>
+		
+		<!--
+		<script type="text/javascript">
+		var myVar="hello";
+		
+		var value=$('#sliderOutpu1').attr('data-slider');
+		function GetValue() { 
+		if (value < 70) {
+		alert('Correct'); }
+		}
+		</script>-->
+		
+		
+		
     </body>
 </html>
 

@@ -10,11 +10,15 @@ app.config['DEBUG'] = True
 def home():
 	return render_template("home.html")
 
+@app.route("/about")
+def about():
+	return render_template("about.html")
+	
+	
 @app.route("/search", methods=["GET", "POST"])
 def search():
 	if request.method=="POST":
-		url = # insert API url here 
-			+ request.form["user_search1"]
+		url = "https://api.github.com/search/repositories?q=" + request.form["user_search1"]
 		response_dict = requests.get(url).json
 		return render_template("results.html", api_data=response_dict)
 	else:
@@ -24,5 +28,5 @@ def search():
 def notfound(error):
 	return "Sorry, that page does not exist.", 404
 
-if __name__ = '__main__':
+if __name__ == '__main__':
 	app.run(host = '0.0.0.0')
