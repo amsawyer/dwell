@@ -71,7 +71,7 @@
         	<p class="SeasonClass">Spring</p>
 			<div class="row">
 			<div class="small-10 medium-11 columns">
-				<div id="slider1" class="range-slider" data-slider data-options="display_selector: #sliderOutput1; start: -20; end: 160;">
+				<div id="slider1" class="range-slider" data-slider data-options="display_selector: #sliderOutput1; start: -100; end: 135;">
 				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
 				  <span class="range-slider-active-segment"></span>
 				</div>
@@ -83,7 +83,7 @@
         	<p class="SeasonClass">Summer</p>
 			<div class="row">
 			<div class="small-10 medium-11 columns">
-				<div id="slider2" class="range-slider" data-slider data-options="display_selector: #sliderOutput2; start: -20; end: 160;">
+				<div id="slider2" class="range-slider" data-slider data-options="display_selector: #sliderOutput2; start: -100; end: 135;">
 				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
 				  <span class="range-slider-active-segment"></span>
 				</div>
@@ -95,7 +95,7 @@
 			<p class="SeasonClass">Fall</p>
 			<div class="row">
 			<div class="small-10 medium-11 columns">
-				<div id="slider3" class="range-slider" data-slider data-options="display_selector: #sliderOutput3; start: -20; end: 160;">
+				<div id="slider3" class="range-slider" data-slider data-options="display_selector: #sliderOutput3; start: -100; end: 135;">
 				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
 				  <span class="range-slider-active-segment"></span>
 				</div>
@@ -107,7 +107,7 @@
 			<p class="SeasonClass">Winter</p>
 			<div class="row">
 			<div class="small-10 medium-11 columns">
-				<div id="slider4" class="range-slider" data-slider data-options="display_selector: #sliderOutput4; start: -20; end: 160;">
+				<div id="slider4" class="range-slider" data-slider data-options="display_selector: #sliderOutput4; start: -100; end: 135;">
 				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
 				  <span class="range-slider-active-segment"></span>
 				</div>
@@ -120,7 +120,7 @@
 			
         
 			
-        <p class="ButtonClass"><button class="ButtonInnerClass" onClick="functionOne();">Submit</button></p>
+        <p class="ButtonClass"><button class="ButtonInnerClass" onClick="Submit();">Submit</button></p>
 		
 				
 		
@@ -132,6 +132,15 @@
 		<script type="text/javascript">
 		
 		var toggle1 = 1;
+		$('#slider1').foundation('slider', 'set_value', 73);
+		$('#slider2').foundation('slider', 'set_value', 73);
+		$('#slider3').foundation('slider', 'set_value', 73);
+		$('#slider4').foundation('slider', 'set_value', 73);
+		
+		function Submit() { console.log('Submit button pressed'); 
+		
+		
+		}
 		
 		$('#exampleRadioSwitch1').click(function() { console.log('exampleRadioSwitch1 pressed');
 		
@@ -141,6 +150,16 @@
 		var usersummer = Math.round(($('#slider2').attr('data-slider')*9/5)+32);
 		var userfall = Math.round(($('#slider3').attr('data-slider')*9/5)+32);
 		var userwinter = Math.round(($('#slider4').attr('data-slider')*9/5)+32);
+
+		
+		if (userspring > 175) {userspring = 175;}
+		if (usersummer > 175) {usersummer = 175;}
+		if (userfall > 175) {userfall = 175;}
+		if (userwinter > 175) {userwinter = 175;}
+		if (userspring < -5) {userspring = -5;}
+		if (usersummer < -5) {usersummer = -5;}
+		if (userfall < -5) {userfall = -5;}
+		if (userwinter < -5) {userwinter = -5;}
 
 				
 		$('#slider1').foundation('slider', 'set_value', userspring);
@@ -162,11 +181,23 @@
 		$('#exampleRadioSwitch2').click(function() { console.log('exampleRadioSwitch2 pressed');
 		
 		if (toggle1 === 1) {
+		
+		
 		var userspring = Math.round(($('#slider1').attr('data-slider')-32)*5/9);		
 		var usersummer = Math.round(($('#slider2').attr('data-slider')-32)*5/9);
 		var userfall = Math.round(($('#slider3').attr('data-slider')-32)*5/9);
 		var userwinter = Math.round(($('#slider4').attr('data-slider')-32)*5/9);
 		
+		
+		if (userspring > 175) {userspring = 175;}
+		if (usersummer > 175) {usersummer = 175;}
+		if (userfall > 175) {userfall = 175;}
+		if (userwinter > 175) {userwinter = 175;}
+		if (userspring < -5) {userspring = -5;}
+		if (usersummer < -5) {usersummer = -5;}
+		if (userfall < -5) {userfall = -5;}
+		if (userwinter < -5) {userwinter = -5;}
+	
 		
 		$('#slider1').foundation('slider', 'set_value', userspring);
 		$('#slider2').foundation('slider', 'set_value', usersummer);

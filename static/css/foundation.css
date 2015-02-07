@@ -5698,7 +5698,7 @@ kbd {
     padding: 0; }
     .switch input + label {
       margin-left: 0;
-      margin-right: 0; }
+      margin-right: 15; }
   .switch label:after {
     content: "";
     display: block;
