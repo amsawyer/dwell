@@ -19,32 +19,23 @@ def main():
         counter += 1
     
     printCities()
-<<<<<<< HEAD
-=======
     usr_spr = 60
     usr_summ = 75
     usr_aut = 60
     usr_win = 40
     
     calc(usr_spr, usr_summ, usr_aut, usr_win)
->>>>>>> ali
     return
 
 def printCities():
     for i in range (0,100):
-<<<<<<< HEAD
-        print str(cities[i].name) + "spring: " + str(cities[i].spr) + "summer: " + str(cities[i].summ) + "autumn: " + str(cities[i].aut) + "winter: " + str(cities[i].win)
-=======
         print str(i) + str(cities[i].name) + "spring: " + str(cities[i].spr) + "summer: " + str(cities[i].summ) + "autumn: " + str(cities[i].aut) + "winter: " + str(cities[i].win)
->>>>>>> ali
     return
 
 def addEntireCity(city_id, cityObject):
     cities[city_id] = cityObject
     return
 
-<<<<<<< HEAD
-=======
 def calc(usr_spr, usr_summ, usr_aut, usr_win):
 	for i in range(0, 100):
 		spr = cities[i].spr
@@ -62,7 +53,6 @@ def calc(usr_spr, usr_summ, usr_aut, usr_win):
 		print str(i) + "City name: " + str(cities[i].name) + "score: " + str(score)
 	return
 
->>>>>>> ali
 class City:
     """ Object for modelling a city """
     def __init__(self, name, spr, summ, aut, win):
