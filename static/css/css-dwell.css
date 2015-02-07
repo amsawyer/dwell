@@ -21,6 +21,36 @@ body {
 }
 
 
+.BigText {
+	font: 33px Helvetica;
+	line-height: 150%;
+}
+
+.MediumText {
+	font: 20px Helvetica;
+	line-height: 150%;
+}
+
+.MediumText2 {
+	font: 25px Helvetica;
+	line-height: 150%;
+
+}
+
+
+.ImgPadding {
+	padding-top: 22px;
+	padding-left: 55px;
+	padding-right: 55px;
+
+}
+
+.ImgPadding2 {
+	padding-top: 22px;
+	padding-left: 15px;
+	padding-right: 15px;
+
+}
 
 .SeasonClass {
 	padding-left: 0.4cm;
@@ -38,6 +68,16 @@ body {
 	font: 20px Helvetica;
 
 }
+
+.ResultClass {
+    max-width: 700px;
+	margin: 1.5cm 10% 0cm 10%;
+	padding: 0.5cm 0.8cm 0.8cm 0.8cm;
+	background-color: rgba(255, 255, 255, 0.8);
+	font: 20px Helvetica;
+
+}
+
 
 .DegreeClass {
 	margin: 0cm 0cm 0cm 0cm;
