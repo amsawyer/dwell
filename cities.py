@@ -29,10 +29,10 @@ def printCities():
 	for i in range (0,100):
 		print str(i) + " " + str(cities[i].name) + "spr: " + str(cities[i].spr) + "summ" + str(cities[i].summ) + "aut: " + str(cities[i].aut) + "win: " + str(cities[i].win)+"\n"
 	return
-
+    
 def addEntireCity(city_id, cityObject):
-	cities[city_id] = cityObject
-	return
+    cities[city_id] = cityObject
+    return
 
 class City:
 	""" Object for modelling a city """
@@ -49,4 +49,3 @@ class City:
 		
 if __name__ == "__main__":
 	main()
-
