@@ -11,8 +11,17 @@ body {
 	background-attachment: fixed;
 }
 
+.LogoClass	{
+
+	
+
+	margin: 0cm 30% -1cm 30%;
+    max-height: 500px;
+	max-width: 600px;
+	background-color: rgba(255, 255, 255, 0);
+}
+
 .TitleClass {
-    max-width: 700px;
 	margin: 1.5cm 10% 1cm 10%;
 	padding: 1cm 1cm 1cm 1cm;
 	background-color: rgba(255, 255, 255, 0.8);
@@ -38,6 +47,12 @@ body {
 }
 
 
+.SmallText {
+	font: 15px Helvetica;
+	line-height: 150%;
+	text-align: center;
+}
+
 .ImgPadding {
 	padding-top: 22px;
 	padding-left: 55px;
@@ -48,7 +63,7 @@ body {
 .ImgPadding2 {
 	padding-top: 22px;
 	padding-left: 15px;
-	padding-right: 15px;
+	padding-right: 2cm;
 
 }
 
@@ -61,7 +76,6 @@ body {
 }
 
 .ItemClass {
-    max-width: 700px;
 	margin: 1cm 10% 1cm 10%;
 	padding: 0.5cm 0.8cm 0.8cm 0.8cm;
 	background-color: rgba(255, 255, 255, 0.8);
@@ -70,7 +84,6 @@ body {
 }
 
 .ResultClass {
-    max-width: 700px;
 	margin: 1.5cm 10% 0cm 10%;
 	padding: 0.5cm 0.8cm 0.8cm 0.8cm;
 	background-color: rgba(255, 255, 255, 0.8);
