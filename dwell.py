@@ -1,57 +1,36 @@
 from flask import Flask, jsonify, render_template, request
 
 import requests
-# Configuration
 
 app = Flask(__name__)
-app.config.from_object(__name__)
+
 
 app.config['DEBUG'] = True
 
-# app routes
-
 @app.route("/")
 def home():
-    return render_template("home.html")
+	return render_template("home.html")
 
-## is this route unnecessary?
 @app.route("/search", methods=["GET", "POST"])
 def search():
-<<<<<<< HEAD
-    if request.method=="POST":
-        return render_template("results.html", api_data=response_dict)
-    else:
-        return render_template("search.html")
+	if request.method=="POST":
+		return render_template("results.html", api_data=response_dict)
+	else:
+		return render_template("search.html")
 
-@app.route("/results", methods=["GET", "POST"]) 
+@app.route("/results",methods=["GET","POST"]}
 def get_results():
     if request.method == "POST":
         spr_temp = request.form["input_spr"]
         summ_temp = request.form["input_summ"]
         aut_temp = request.form["input_aut"]
         win_temp = request.form["input_win"]
-        print spr_temp
-        print summ_temp
-        print aut_temp
-        print win_temp
-=======
-	if request.method=="POST":
-	#	url = # insert API url here 
-	#		+ request.form["user_search1"]
-		response_dict = requests.get(url).json
-		return render_template("results.html", api_data=response_dict)
-	else:
-		return render_template("search.html")
->>>>>>> master
+        
+        return render_template("results.html")
 
 @app.errorhandler(404)
 def notfound(error):
-    return "Sorry, that page does not exist.", 404
+	return "Sorry, that page does not exist.", 404
 
-<<<<<<< HEAD
-if __name__ == '__main__':
-    app.run(host = '0.0.0.0')
-=======
-if __name__== '__main__':
+if __name__ = '__main__':
 	app.run(host = '0.0.0.0')
->>>>>>> master
