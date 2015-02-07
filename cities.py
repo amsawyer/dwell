@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-from flask import Flask, jsonify
 import math
 import operator
-import requests
-=======
-import math
->>>>>>> a48d182e63e034d06ae74ffaf014c3cf76864eb0
 
 cities = { }
 def average(usr_spr, usr_summ, usr_aut, usr_win):
@@ -25,7 +19,6 @@ def average(usr_spr, usr_summ, usr_aut, usr_win):
         i += 5
         counter += 1
     
-<<<<<<< HEAD
     tup = calc(usr_spr, usr_summ, usr_aut, usr_win) # full 100
     sorted_tup = sort(tup) # sorted 100
     city_list = []
@@ -37,17 +30,7 @@ def average(usr_spr, usr_summ, usr_aut, usr_win):
     #photos = get_photos(city_list)
 
     return city_list
-=======
-    printCities()
-    usr_spr = 60
-    usr_summ = 75
-    usr_aut = 60
-    usr_win = 40
     
-    calc(usr_spr, usr_summ, usr_aut, usr_win)
-    return
->>>>>>> a48d182e63e034d06ae74ffaf014c3cf76864eb0
-
 def printCities():
     for i in range (0,100):
         print str(i) + str(cities[i].name) + "spring: " + str(cities[i].spr) + "summer: " + str(cities[i].summ) + "autumn: " + str(cities[i].aut) + "winter: " + str(cities[i].win)
@@ -58,7 +41,6 @@ def addEntireCity(city_id, cityObject):
     return
 
 def calc(usr_spr, usr_summ, usr_aut, usr_win):
-<<<<<<< HEAD
     name_list = []
     score_list = []
     for i in range(0, 100):
@@ -86,44 +68,8 @@ def calc(usr_spr, usr_summ, usr_aut, usr_win):
 
 def sort(tup):
     tup.sort(key=operator.itemgetter(1))
+    print tup
     return tup
-
-'''
-def get_photos(city_list):
-    photo_urls = []
-    for i in range (0, 3):
-        url = "https://api.shutterstock.com/v2/images/search?per_page=1&query=" + city_list[i]
-        # necessary URL formatting modifications
-        url = url.replace(" ", "+")
-        comma_idx = url.rfind(",")
-        url = url[0:comma_idx]
-        print url
-        response = requests.get(url)
-        response_dict = response.json()
-        photo_url = (response_dict.get("large_thumb")).get("url")
-        print photo_url
-        photo_urls.append(photo_url)
-       
-    print photo_urls
-    return photo_urls
-'''
-=======
-	for i in range(0, 100):
-		spr = cities[i].spr
-		summ = cities[i].summ
-		aut = cities[i].aut
-		win = cities[i].win
-
-		dif1sq = math.pow(abs(usr_spr - float(spr)),2)
-		dif2sq = math.pow(abs(usr_summ - float(summ)),2)
-		dif3sq = math.pow(abs(usr_aut - float(aut)),2)
-		dif4sq = math.pow(abs(usr_win - float(win)),2)
-		
-		total = dif1sq + dif2sq + dif3sq + dif4sq
-		score = math.sqrt(total)
-		print str(i) + "City name: " + str(cities[i].name) + "score: " + str(score)
-	return
->>>>>>> a48d182e63e034d06ae74ffaf014c3cf76864eb0
 
 class City:
     """ Object for modelling a city """
@@ -135,10 +81,5 @@ class City:
         self.win = win
         return
         
-<<<<<<< HEAD
-#if __name__ == "__main__":
- #   main()
-=======
 if __name__ == "__main__":
-	main()
->>>>>>> a48d182e63e034d06ae74ffaf014c3cf76864eb0
+    main()
