@@ -37,11 +37,6 @@ def average(usr_spr, usr_summ, usr_aut, usr_win):
 
     return city_list
 
-def printCities():
-    for i in range (0,100):
-        print str(i) + str(cities[i].name) + "spring: " + str(cities[i].spr) + "summer: " + str(cities[i].summ) + "autumn: " + str(cities[i].aut) + "winter: " + str(cities[i].win)
-    return
-
 def addEntireCity(city_id, cityObject):
     cities[city_id] = cityObject
     return
@@ -66,7 +61,6 @@ def calc(usr_spr, usr_summ, usr_aut, usr_win):
         # Add to lists
         name_list.append(str(cities[i].name))
         score_list.append(score)
-        print str(i) + "City name: " + str(cities[i].name) + "score: " + str(score)
 
     # Create 2-tuple of names and scores
     tup = zip(name_list, score_list)

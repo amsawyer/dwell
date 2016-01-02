@@ -29,10 +29,6 @@ def get_results():
         summ_temp = request.form["input_summ"]
         aut_temp = request.form["input_aut"]
         win_temp = request.form["input_win"]
-        print spr_temp
-        print summ_temp
-        print aut_temp
-        print win_temp
         sorted_tup = cities.average(spr_temp, summ_temp, aut_temp, win_temp)
         return render_template("results.html", data=sorted_tup)
 
