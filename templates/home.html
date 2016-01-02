@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <title>Dwell</title>
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}">
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/css-dwell.css') }}">
-		<script src="{{ url_for('static', filename='js/vendor/modernizr.js') }}"></script>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/css-dwell.css') }}">
+        <script src="{{ url_for('static', filename='js/vendor/modernizr.js') }}"></script>
     </head>
     <body>
-	
-	
-	<div class="sticky">
-	<nav class="top-bar" data-topbar role="navigation">
+    
+    
+    <div class="sticky">
+    <nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area">
     <li class="name">
       <h1><a href="/">Dwell</a></h1>
@@ -34,89 +32,192 @@
           <li class="active"><a href="#">Active link in dropdown</a></li>
         </ul>
       </li>
-	  -->
+      -->
     </ul>
-	<!--
-	<ul class="left">
+    <!--
+    <ul class="left">
       <li class="active"><a href="/about">About</a></li>
     </ul>
-	-->
+    -->
     
   </section>
 </nav>
-	</div>
-	
-	
-        <p class="TitleClass">Choose your ideal temperatures for each season.</p>
-		
-		<div class="ItemClass">        		
-        	<p class="SeasonClass">Spring</p>
-			<div class="row">
-			<div class="small-10 medium-11 columns">
-				<div class="range-slider" data-slider="input_spr" data-options="display_selector: #sliderOutput1; start: 0; end: 140;">
-				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
-				  <span class="range-slider-active-segment"></span>
-				</div>
-			</div>
-			<div class="small-2 medium-1 columns">
-				<span id="sliderOutput1"></span>
-			</div>
-			</div>
-        	<p class="SeasonClass">Summer</p>
-			<div class="row">
-			<div class="small-10 medium-11 columns">
-				<div class="range-slider" data-slider="input_summ" data-options="display_selector: #sliderOutput2; start: 0; end: 140;">
-				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
-				  <span class="range-slider-active-segment"></span>
-				</div>
-			</div>
-			<div class="small-2 medium-1 columns">
-				<span id="sliderOutput2"></span>
-			</div>
-			</div>
-			<p class="SeasonClass">Fall</p>
-			<div class="row">
-			<div class="small-10 medium-11 columns">
-				<div class="range-slider" data-slider="input_aut" data-options="display_selector: #sliderOutput3; start: 0; end: 140;">
-				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
-				  <span class="range-slider-active-segment"></span>
-				</div>
-			</div>
-			<div class="small-2 medium-1 columns">
-				<span id="sliderOutput3"></span>
-			</div>
-			</div>
-			<p class="SeasonClass">Winter</p>
-			<div class="row">
-			<div class="small-10 medium-11 columns">
-				<div class="range-slider" data-slider="input_win" data-options="display_selector: #sliderOutput4; start: 0; end: 140;">
-				  <span class="range-slider-handle" role="slider" tabindex="0"></span>
-				  <span class="range-slider-active-segment"></span>
-				</div>
-			</div>
-			<div class="small-2 medium-1 columns">
-				<span id="sliderOutput4"></span>
-			</div>
-			</div>
-			</div>
-			
+    </div>
+    
+    
+        <p class="TitleClass">Choose your ideal temperature for each season.</p>
         
-			
-        <p class="ButtonClass"><button class="ButtonInnerClass" onClick="alert('clicked');">Submit</button></p>
-		
-				
-		
-		<script src="{{ url_for('static', filename='js/vendor/jquery.js') }}"></script>
-		<script src="{{ url_for('static', filename='js/foundation.min.js') }}"></script> 
-		<script> 
-			$(document).foundation();
-			$('#slider').attr('data-slider');			
-		</script> 	
-		<script type="text/javascript">
-			var myVar="clicked:";
-			function showAlert() { alert('You triggered an alert!'); }
-</script>
+        <div class="ItemClass">             
 
+<!-- Using radio buttons – each switch turns off the other two -->
+
+<div class="DegreeClass">
+<div class="switch small">
+  <input id="exampleRadioSwitch1" type="radio" checked name="testGroup">
+  <label for="exampleRadioSwitch1"></label>ºF
+</div>
+<br>
+<div class="switch small">
+  <input id="exampleRadioSwitch2" type="radio" name="testGroup">
+  <label for="exampleRadioSwitch2"></label>ºC
+</div> 
+</div>
+
+<br>
+
+            <p class="SeasonClass">Spring</p>
+            <div class="row">
+            <div class="small-10 medium-11 columns">
+                <form action="/results", method="post">
+                <div class="range-slider" data-slider data-options="display_selector: #sliderOutput1; start: 0; end: 140;">
+                  <span class="range-slider-handle" role="slider" tabindex="0"></span>
+                  <span class="range-slider-active-segment"></span>
+                  <input type="hidden" name="input_spr" required/>
+                </div>
+            </div>
+            <div class="small-2 medium-1 columns">
+                <span id="sliderOutput1"></span>
+            </div>
+            </div>
+            <p class="SeasonClass">Summer</p>
+            <div class="row">
+            <div class="small-10 medium-11 columns">
+                <div class="range-slider" data-slider data-options="display_selector: #sliderOutput2; start: 0; end: 140;">
+                  <span class="range-slider-handle" role="slider" tabindex="0"></span>
+                  <span class="range-slider-active-segment"></span>
+                  <input type="hidden" name="input_summ" required/>
+
+                </div>
+            </div>
+            <div class="small-2 medium-1 columns">
+                <span id="sliderOutput2"></span>
+            </div>
+            </div>
+            <p class="SeasonClass">Fall</p>
+            <div class="row">
+            <div class="small-10 medium-11 columns">
+                <div class="range-slider" data-slider data-options="display_selector: #sliderOutput3; start: 0; end: 140;">
+                  <span class="range-slider-handle" role="slider" tabindex="0"></span>
+                  <span class="range-slider-active-segment"></span>
+                  <input type="hidden" name="input_aut" required/>
+
+                </div>
+            </div>
+            <div class="small-2 medium-1 columns">
+                <span id="sliderOutput3"></span>
+            </div>
+            </div>
+            <p class="SeasonClass">Winter</p>
+            <div class="row">
+            <div class="small-10 medium-11 columns">
+                <div class="range-slider" data-slider data-options="display_selector: #sliderOutput4; start: 0; end: 140;">
+                  <span class="range-slider-handle" role="slider" tabindex="0"></span>
+                  <span class="range-slider-active-segment"></span>
+                  <input type="hidden" name="input_win" required/>
+
+                </div>
+            </div>
+            <div class="small-2 medium-1 columns">
+                <span id="sliderOutput4"></span>
+            </div>
+            </div>
+            </div>
+            
+        
+            
+        <p class="ButtonClass"><button type="submit" class="ButtonInnerClass">Submit</button></p></form>
+        
+                
+        
+        <script src="{{ url_for('static', filename='js/vendor/jquery.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/foundation.min.js') }}"></script> 
+        <script> 
+            $(document).foundation();           
+        </script>   
+
+<script type="text/javascript">
+        
+        var toggle1 = 1;
+        $('#slider1').foundation('slider', 'set_value', 73);
+        $('#slider2').foundation('slider', 'set_value', 73);
+        $('#slider3').foundation('slider', 'set_value', 73);
+        $('#slider4').foundation('slider', 'set_value', 73);
+        
+        function Submit() { console.log('Submit button pressed'); 
+        
+        
+        }
+        
+        $('#exampleRadioSwitch1').click(function() { console.log('exampleRadioSwitch1 pressed');
+        
+        if (toggle1 === 0) {
+                
+        var userspring = Math.round(($('#slider1').attr('data-slider')*9/5)+32);        
+        var usersummer = Math.round(($('#slider2').attr('data-slider')*9/5)+32);
+        var userfall = Math.round(($('#slider3').attr('data-slider')*9/5)+32);
+        var userwinter = Math.round(($('#slider4').attr('data-slider')*9/5)+32);
+        
+        if (userspring > 175) {userspring = 175;}
+        if (usersummer > 175) {usersummer = 175;}
+        if (userfall > 175) {userfall = 175;}
+        if (userwinter > 175) {userwinter = 175;}
+        if (userspring < -5) {userspring = -5;}
+        if (usersummer < -5) {usersummer = -5;}
+        if (userfall < -5) {userfall = -5;}
+        if (userwinter < -5) {userwinter = -5;}
+                
+        $('#slider1').foundation('slider', 'set_value', userspring);
+        $('#slider2').foundation('slider', 'set_value', usersummer);
+        $('#slider3').foundation('slider', 'set_value', userfall);
+        $('#slider4').foundation('slider', 'set_value', userwinter);
+                    
+        toggle1 = 1;
+        
+        
+        console.log("Spring temp is " + userspring);
+        
+        }
+        
+        })
+        
+        
+        $('#exampleRadioSwitch2').click(function() { console.log('exampleRadioSwitch2 pressed');
+        
+        if (toggle1 === 1) {
+        
+        
+        var userspring = Math.round(($('#slider1').attr('data-slider')-32)*5/9);        
+        var usersummer = Math.round(($('#slider2').attr('data-slider')-32)*5/9);
+        var userfall = Math.round(($('#slider3').attr('data-slider')-32)*5/9);
+        var userwinter = Math.round(($('#slider4').attr('data-slider')-32)*5/9);
+        
+        
+        if (userspring > 175) {userspring = 175;}
+        if (usersummer > 175) {usersummer = 175;}
+        if (userfall > 175) {userfall = 175;}
+        if (userwinter > 175) {userwinter = 175;}
+        if (userspring < -5) {userspring = -5;}
+        if (usersummer < -5) {usersummer = -5;}
+        if (userfall < -5) {userfall = -5;}
+        if (userwinter < -5) {userwinter = -5;}
+    
+        
+        $('#slider1').foundation('slider', 'set_value', userspring);
+        $('#slider2').foundation('slider', 'set_value', usersummer);
+        $('#slider3').foundation('slider', 'set_value', userfall);
+        $('#slider4').foundation('slider', 'set_value', userwinter);
+        
+                    
+        toggle1 = 0;
+        
+        console.log("Spring temp is " + userspring);
+        
+        
+        }
+        
+        })
+        
+        </script>
 
     </body>
 </html>
