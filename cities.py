@@ -2,10 +2,14 @@ from flask import Flask, jsonify
 import math
 import operator
 import requests
+import os
 
 cities = { }
 def average(usr_spr, usr_summ, usr_aut, usr_win):
-    myfile = open('cities.txt', 'r')
+    script_dir = os.path.dirname(__file__)
+    rel_path = "cities.txt"
+    abs_path = os.path.join(script_dir, rel_path)
+    myfile = open(abs_path, 'r')
     
     i = 0
     counter = 0
@@ -62,7 +66,7 @@ def calc(usr_spr, usr_summ, usr_aut, usr_win):
         # Add to lists
         name_list.append(str(cities[i].name))
         score_list.append(score)
-        # print str(i) + "City name: " + str(cities[i].name) + "score: " + str(score)
+        print str(i) + "City name: " + str(cities[i].name) + "score: " + str(score)
 
     # Create 2-tuple of names and scores
     tup = zip(name_list, score_list)

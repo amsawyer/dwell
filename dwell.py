@@ -1,8 +1,8 @@
 from flask import Flask, jsonify, render_template, request
 import requests
 import cities
-# Configuration
 
+# Configuration
 app = Flask(__name__)
 app.config.from_object(__name__)
 
@@ -33,7 +33,8 @@ def get_results():
         print summ_temp
         print aut_temp
         print win_temp
-        return render_template("results.html")
+        sorted_tup = cities.average(spr_temp, summ_temp, aut_temp, win_temp)
+        return render_template("results.html", data=sorted_tup)
 
 @app.route("/about")
 def about():
