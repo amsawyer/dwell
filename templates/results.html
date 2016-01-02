@@ -2,10 +2,137 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Results</title>
+        <title>About - Dwell</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/foundation.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/css-dwell.css') }}">
+        <script src="{{ url_for('static', filename='js/vendor/modernizr.js') }}"></script>
     </head>
     <body>
+    
+    
+    <div class="sticky">
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="/">Dwell</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
 
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="/about">About  </a></li>
+    <!--   <li class="has-dropdown">
+        <a href="#">Menu</a>
+        <ul class="dropdown">
+          <li><a href="#">First link in dropdown</a></li>
+          <li class="active"><a href="#">Active link in dropdown</a></li>
+        </ul>
+      </li>
+    -->
+    </ul>
+
+    
+  </section>
+</nav>
+    </div>
+    
+    
+        <p class="TitleClass">Your top city is: </p>
+        
+        <div class="ResultClass">
+            <p class="BigText">City #1<br></p>
+            <p class="ImgPadding"><img src="http://lorempixel.com/800/400/" alt="Top_city"></p>
+            <p class="AboutText">State: ######<br>
+            Population: #######<br><br>
+            Historical average temperatures:
+            <br>
+            <table style="width:100%">
+              <tr>
+                <td>Spring</td>
+                <td>Summer</td>     
+                <td>Fall</td>
+                <td>Winter</td>
+              </tr>
+              <tr>
+                <td>######</td>
+                <td>######</td>     
+                <td>######</td>
+                <td>######</td>
+              </tr>
+            </table>
+            </p>
+            </div>
+            
+        <p class="TitleClass">You might also like:</p>
+        
+        <div class="ResultClass">
+            <p class="MediumText2">City #2</p>
+            <p class="ImgPadding2"><img src="http://lorempixel.com/251/200" alt="Top_city"></p>
+            <p class="MediumText">State: ######<br>
+            Population: #######<br><br>
+            Historical average temperatures:</p>
+            <br>
+            <table style="width:100%">
+              <tr>
+                <td>Spring</td>
+                <td>Summer</td>     
+                <td>Fall</td>
+                <td>Winter</td>
+              </tr>
+              <tr>
+                <td>######</td>
+                <td>######</td>     
+                <td>######</td>
+                <td>######</td>
+              </tr>
+            </table>
+            <br>
+            
+            <p class="MediumText2">City #3
+            <p class="ImgPadding2"><img src="http://lorempixel.com/250/200" alt="Top_city"></p>
+            <p class="MediumText">State: ######<br>
+            Population: #######<br><br>
+            Historical average temperatures:
+            <br>
+            <table style="width:100%">
+              <tr>
+                <td>Spring</td>
+                <td>Summer</td>     
+                <td>Fall</td>
+                <td>Winter</td>
+              </tr>
+              <tr>
+                <td>######</td>
+                <td>######</td>     
+                <td>######</td>
+                <td>######</td>
+              </tr>
+            </table>
+            </p>
+            </p>
+
+            
+            
+            </div>
+
+
+        
+        
+        
+        
+            
+        <p class="ButtonClass"><button class="ButtonInnerClass" onclick="location.href='/'">Return</button></p>
+        
+        
+        <script src="{{ url_for('static', filename='js/vendor/jquery.js') }}"></script>
+        <script src="{{ url_for('static', filename='js/foundation.min.js') }}"></script> 
+        <script> 
+            $(document).foundation(); 
+        </script>   
+        
     </body>
 </html>
-
