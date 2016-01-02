@@ -8,6 +8,9 @@ vagrant ssh
 
 python /vagrant/dwell.py
 
+    (May need to install dependencies such as flask:
+    sudo pip install <dependencies>)
+
 In browser, go to: http://0.0.0.0:5000/
 
 -----
